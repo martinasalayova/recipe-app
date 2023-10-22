@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import styled from "styled-components";
 
 export default function Popular() {
   const [popular, setPopular] = useState([]);
@@ -16,7 +17,7 @@ export default function Popular() {
   };
 
   return (
-    <div className="Popular">
+    <Wrapper className="Popular">
       {popular.map((recipe) => {
         return (
           <div key={recipe.id}>
@@ -24,6 +25,14 @@ export default function Popular() {
           </div>
         );
       })}
-    </div>
+    </Wrapper>
   );
 }
+
+const Wrapper = styled.div`
+  margin: 4rem 0rem;
+`;
+
+const Card = styled.div`
+  min-height: ;
+`;
