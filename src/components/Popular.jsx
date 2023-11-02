@@ -32,12 +32,11 @@ export default function Popular() {
       >
         {popular.map((recipe) => {
           return (
-            <SplideSlide>
+            <SplideSlide key={recipe.id}>
               <Card>
-                <div key={recipe.id}>
-                  <p>{recipe.title}</p>
-                  <img src={recipe.image} alt={recipe.title}></img>
-                </div>
+                <p>{recipe.title}</p>
+                <img src={recipe.image} alt={recipe.title}></img>
+                <Gradient />
               </Card>
             </SplideSlide>
           );
@@ -89,4 +88,5 @@ const Gradient = styled.div`
   position: absolute;
   width: 100%;
   height: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5));
 `;
