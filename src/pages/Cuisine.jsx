@@ -21,7 +21,6 @@ function Cuisine() {
 
   return (
     <Grid>
-      <h1>Hi</h1>
       {cuisine.map((item) => {
         return (
           <Card key={item.id}>
